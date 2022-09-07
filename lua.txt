@@ -1,0 +1,42 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("emiiq's scripthub!", "DarkTheme")
+
+-- MainTab
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Universal Scripts")
+
+-- TrollTab
+local TrollTab = Window:NewTab("Troll")
+local TrollSection = TrollTab:NewSection("Universal Scripts")
+-- Main Tab Buttons
+MainSection:NewButton("Reset", "bro...", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    print("Reset")
+end)
+
+MainSection:NewButton("Infinite Yield", "A fucking ADMIN SCRIPT.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    print("Infinite Yield Injected")
+end)
+
+
+
+
+-- LP
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("WalkSpeed", "SliderInfo", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "SliderInfo", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+
+-- Credits Tab
+local CreditsTab = Window:NewTab("Credits")
+local CreditsSection = CreditsTab:NewSection("Credits")
+local CreditsSection = CreditsTab:NewSection("made by emiiq#2584")
+local CreditsSection = CreditsTab:NewSection("WIP")
